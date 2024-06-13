@@ -181,37 +181,6 @@ ul li:hover ul {
 	height: 600px;
 }
 
-#myBtn { /* Back to top buttons, sends user to top of page */
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99; /* Brings element to the front */
-  font-size: 18px;
-  border: none;
-  background-color: White;
-  color: Black;
-  cursor: pointer;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  opacity: 0;
-  transition: all 0.4s;
-}
-
-#myBtn.active {
-  bottom: 32px;
-  pointer-events: auto;
-  opacity: 1;
-}
-
-#myBtn:hover {
-	background-color: Grey; /* Changes the color of the button when hovered */
-	transition-duration: 0.4s;
-}
-
 .footer { /* sits at the bottom of the page, contains name and copyright statement */
   padding-top: 25px;
   background-color: yellow;
