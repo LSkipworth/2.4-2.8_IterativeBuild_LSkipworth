@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Kiwi Conservation Club</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Kiwi, Forest, Liam Skipworth"/>
+		<meta name="Author" content="Liam Skipworth"/>
+		<meta name="Description" content="A KCC website page"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- import the webpage's stylesheet goes here -->
+		<link rel="stylesheet" href="css/style.css">
+		
+		<link rel="icon" href="images/Page_Icon.png">
+		
+	</head>
+	
+	
+	<body>
+		
+		<div class="grid-container">
+			<div class="nav">
+				Navigation
+			</div>
+			
+			<div class="header">
+				<div class="header-background" id="fadeout">
+					<div class="header-content" id="fadeout">Header</div>
+				</div>
+			</div>
+			
+			<div class="content"> <!-- This contains the text -->
+				EOTC summary
+			</div>
+
+			<div class="scroll-slider">Banner with images of available activies</div>
+			
+			
+			<div class="content">
+				Information
+			</div>
+			
+			<div class="content">Necessary forms</div>
+			
+			<div class="footer">Footer with contact information</div>
+		</div>
+	</body>
+</html>
