@@ -1,13 +1,4 @@
 /* CSS files add styling rules to your content */
-@font-face {
-  font-family: 'SONGERSemiExpanded-Bold';
-  src:url('SONGERSemiExpanded-Bold.ttf.woff') format('woff'),
-      url('SONGERSemiExpanded-Bold.ttf.svg#SONGERSemiExpanded-Bold') format('svg'),
-      url('SONGERSemiExpanded-Bold.ttf.eot'),
-      url('SONGERSemiExpanded-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-  font-weight: normal;
-  font-style: normal;
-}
 
 html {
   scroll-snap-type: y proximity;
