@@ -22,42 +22,6 @@ h1 {
   text-align: center;
   color: white;
   font-size: 75px;
-  font-family: 'SONGERSemiExpanded-Bold';
-}
-
-h2 {
-  position: absolute;
-	color: white;
-	font-size: 50px;
-	font-family: 'SONGERSemiExpanded-Bold';
-	padding-left: 200px;
-  padding-top: 25px;
-}
-
-h3 {
-  padding-left: 700px;
-  padding-right: 200px;
-	color: white;
-	font-size: 20px;
-	font-family: 'SONGERSemiExpanded-Bold';
-}
-
-f1 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 30px;
-	color: white;
-	padding-top: 20px;
-	text-align: centre;
-}
-
-f2 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 20px;
-	color: white;
-}
-
-a {
-  font-family: 'SONGERSemiExpanded-Bold';
 }
 
 .grid-container { /*Creates grid for my website*/
@@ -67,86 +31,20 @@ a {
   height: 100vh;
 }
 
-.nav {
+.nav { /*Navigation menu at top of screen*/
   box-sizing: border-box;
-  text-align: right;
+  text-align: left;
   background-color: blue;
-  z-index: 99;
-  width:100%;
-  animation-name: fadein;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
+  color: white;
 }
 
-.nav-logo {
-  text-align: right;
-  width: auto;
-  height: 45px;
-  position: absolute;
-  padding-top: 5px;
-  padding-left: 10px;
-}
-
-.nav-logo img {width:100%; height:100%;}
-
-/* CSS for block menu starts here */
-ul {
-  display: inline;
-  padding: 20px 0px 0px 0px;
-  list-style: none;
-}
-ul li {
-  font-family: 'SONGERSemiExpanded-Bold';
-  font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  position: relative;
-  padding: 13px 30px 17px; /*padding for main block menu buttons */
-}
-ul li:hover {
-  a {color:black;} /*When box is hovered over, text color changes to white*/
-  background: white;
-  }
-  
-/* Hover Colours*/
-a:link {color: white;} /* unvisited link */
-a:visited {color:#FFFFFF;} /* visited link */
-a:hover {color:white;} /* mouse over link */
-a:active {color:#FFFFFF;}  /* selected link */
-
-a {
-text-decoration: none;
-}
-
-ul li ul {
-  padding: 0;
-  position: absolute;
-  top: 48px; /* space between each drop-down menu list */
-  left: 0;
-  width: 175px; /* width of drop-down menu list */
-  display: none;
-  visibility: hidden; /* this hides the drop-down menu list */
-  z-index: 1; /* for overlapping divs, bringing to the front like a drop down menu */
-}
-
-ul li ul li { 
-  background: white; /* this is the drop-down menu background color */
-  display: block; 
-}
-ul li ul li:hover { background: grey;} /* this is the drop-down menu hover on blocks */
-
-ul li:hover ul {
-  display: block;
-  visibility: visible; /* this makes the drop-down menu visible*/
-}
-/* Style for Navigation ends here*/
 
 .header {
   background-color: black;
   scroll-snap-align: start;
 }
 
-.header-background { /*Background image in the header*/
+.header-background { /*Green colour in background*/
   overflow: hidden;
   position: relative;
   height: 100vh;
@@ -160,9 +58,6 @@ ul li:hover ul {
   overflow: hidden;
   text-align: center;
   margin-top: 25vh;
-  animation-name: fadein;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
   color: white;
 }
 
@@ -173,12 +68,6 @@ ul li:hover ul {
 
 .scroll-slider {
   background-color: orange;
-}
-
-.inline-image { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
-	margin-top: 100px;
-	overflow: hidden;
-	height: 600px;
 }
 
 .footer { /* sits at the bottom of the page, contains name and copyright statement */
