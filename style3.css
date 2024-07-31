@@ -1,14 +1,4 @@
 /* CSS files add styling rules to your content */
-@font-face {
-  font-family: 'SONGERSemiExpanded-Bold';
-  src:url('SONGERSemiExpanded-Bold.ttf.woff') format('woff'),
-      url('SONGERSemiExpanded-Bold.ttf.svg#SONGERSemiExpanded-Bold') format('svg'),
-      url('SONGERSemiExpanded-Bold.ttf.eot'),
-      url('SONGERSemiExpanded-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
@@ -18,52 +8,69 @@ body {
   margin: 0;
 }
 
+b {
+  font-weight: bold;
+}
+
+heading-large {
+  color: white;
+  font-size: 125px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+heading-small {
+  color: white;
+  font-size: 30px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 h1 {
   text-align: center;
+  color: black;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+sub-h1 {
+  color: black;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  color: black;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+h2{ /*Header in the scroll slider*/
+  text-align: center;
   color: white;
-  font-size: 75px;
-  font-family: 'SONGERSemiExpanded-Bold';
+  font-size: 30px;
+  padding-top: 20px;
 }
 
-h2 {
-  position: absolute;
-	color: white;
-	font-size: 50px;
-	font-family: 'SONGERSemiExpanded-Bold';
-	padding-left: 200px;
-  padding-top: 25px;
-}
-
-h3 {
-  padding-left: 700px;
-  padding-right: 200px;
-	color: white;
-	font-size: 20px;
-	font-family: 'SONGERSemiExpanded-Bold';
-}
-
-f1 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 30px;
-	color: white;
-	padding-top: 20px;
-	text-align: centre;
-}
-
-f2 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 20px;
-	color: white;
-}
-
-a {
-  font-family: 'SONGERSemiExpanded-Bold';
+slider-main {
+  color: white;
+  font-size: 20px;
 }
 
 .grid-container { /*Creates grid for my website*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100vh 60vh 40vh 10vh 20vh;
+  grid-template-rows: 100vh 90vh 30vh 20vh;
   height: 100vh;
 }
 
@@ -74,9 +81,6 @@ a {
   position: fixed;
   z-index: 99;
   width:100%;
-  animation-name: fadein;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
 }
 
 .nav-logo {
@@ -97,9 +101,10 @@ ul {
   list-style: none;
 }
 ul li {
-  font-family: 'SONGERSemiExpanded-Bold';
+  font-family: "Ledger", serif;
+  font-weight: 550;
+  font-style: normal;
   font-size: 20px;
-  font-weight: bold;
   display: inline-block;
   position: relative;
   padding: 13px 30px 17px; /*padding for main block menu buttons */
@@ -161,62 +166,128 @@ ul li:hover ul {
   overflow: hidden;
   text-align: center;
   margin-top: 25vh;
-  animation-name: fadein;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  background-color: grey;
   color: white;
 }
 
-@keyframes fadein {
-	
-0% {
-    opacity: 0;
-    transform: translateY(80%);
-  }
-  20% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
 .content { /* Main text goes here */
-  box-sizing: border-box;
+  position: relative;
   background-color: white;
 }
 
-.text-container {
-  overflow: hidden;
-  background-color: white;
-  scroll-snap-align: start;
-}
-
-.scroll-slider {
-  background-color: orange;
+.text-container { /*Holds text on the page*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inline-image-right { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
 	margin-left: auto; 
-	margin-right: 100px;
+	margin-right: 10%;
+	right: 0;
 	width: 500px;
-	height: 400px;
+	height: 500px;
 	background-color: brown;
-	margin-top: 100px;
 	overflow: hidden;
 	color: white;
+	position: absolute;
 	
 }
 
-.inline-image { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
-	margin-top: 100px;
+.inline-image-left { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
+	margin-left: 10%; 
+	width: 500px;
+	height: 500px;
+	background-color: brown;
 	overflow: hidden;
-	height: 600px;
+	color: white;
+	position: absolute;
+}
+
+.body-left {
+  position: absolute;
+  background-color: orange;
+  width: 50%;
+}
+
+.body-right {
+  position: absolute;
+  background-color: orange;
+  width: 50%;
+  right: 0;
+  margin-right: 10%;
+}
+
+.line { /*Line in body text*/
+  background-color: black;
+  height: 1px;
+  width: 90%;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+.scroll-slider-background {
+  background-color: grey;
+  align-items: center;
+  display: flex;
+}
+
+.scroll-slider {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll-slider-left {
+  position: relative;
+  background-color: green;
+  width: 400px;
+  height: 400px;
+  margin-left: 50px;
+  border-radius: 15px;
+}
+
+.scroll-slider-middle {
+  background-color: blue;
+  width: 400px;
+  height: 400px;
+  margin-left: 50px;
+  margin-right: 25px;
+  border-radius: 15px;
+}
+
+.scroll-slider-middle-2 {
+  background-color: pink;
+  width: 400px;
+  height: 400px;
+  margin-left: 25px;
+  margin-right: 50px;
+  border-radius: 15px;
+}
+
+.scroll-slider-right {
+  background-color: purple;
+  width: 400px;
+  height: 400px;
+  right: 0px;
+  margin-right: 50px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.slider-body { /* Text in the header*/
+  background-color: orange;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #myBtn { /* Back to top buttons, sends user to top of page */
