@@ -1,49 +1,76 @@
-/* CSS files add styling rules to your content */
-
-html {
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-}
-
-h1 {
-  text-align: center;
-  color: white;
-  font-size: 75px;
-}
-
-.grid-container { /*Creates grid for my website*/
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 45px 100vh 50vh 40vh 100vh 60vh 20vh;
-  height: 100vh;
-}
-
-.nav { /*Navigation menu at top of screen*/
-  box-sizing: border-box;
-  text-align: left;
-  background-color: blue;
-  color: white;
-}
-
-.header {
-  background-color: green;
-}
-
-.content { /* Main text goes here */
-  box-sizing: border-box;
-  background-color: white;
-}
-
-.scroll-slider {
-  background-color: orange;
-}
-
-.footer { /* sits at the bottom of the page, contains name and copyright statement */
-  padding-top: 25px;
-  background-color: yellow;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Kiwi Conservation Club</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Kiwi, Forest, Liam Skipworth"/>
+		<meta name="Author" content="Liam Skipworth"/>
+		<meta name="Description" content="A KCC website page"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- import the webpage's stylesheet goes here -->
+		<link rel="stylesheet" href="css/style4_V3.css">
+		
+		<link rel="icon" href="images/Page_Icon.png">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ledger&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	</head>
+	
+	
+	<body>
+		
+		<div class="grid-container">
+			<div class="nav">
+				<div class="nav-logo" class="grow"><a href="index.html">Logo</a></div>
+					<ul>
+						<li><a href="index_V2.html">Page 1</a></li>
+						<li><a href="page2_V2.html">Page 2</a></li>
+						<li><a href="page3_V2.html">Page 3</a></li>
+						<li><a href="page4_V2.html">Page 4</a></li>	
+					</ul>
+			</div>
+			
+			<div class="header">
+				<div class="header-background">
+					<div class="header-content">
+						<heading-large>CONTACT</heading-large><br>
+						<heading-small>whakapā mai</heading-small>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content"> <!-- This contains the text -->
+				<button onclick="topFunction()" id="myBtn" title="Go to Top"><img src="images/back-to-top.png" alt="" width="30px"> </button>
+				<div class="text-container">
+					<h1>Call Us</h1>
+					<body><b>School Office</b></body><br>
+					<body>232 8184</body>
+				</div>
+				<div class="line"></div>
+			</div>
+			
+			<div class="content">
+				<div class="text-container">
+					<h1>Email Us</h1>
+					<body><b>EOTC Coordinator</b></body><br>
+					<body>redmonds@tawacollege.school.nz</body>
+					<br><br>
+					<body><b>School</b></body><br>
+					<body>secretary@tawacollege.school.nz</body>
+				</div>
+			</div>
+			
+			<div class="footer">Footer</div>
+		</div>
+		
+		<script type="text/javascript" src="js/fadeout.js"></script>
+		<script type="text/javascript" src="js/backtotop.js"></script>
+		
+	</body>
+</html>
