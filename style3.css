@@ -1,14 +1,4 @@
 /* CSS files add styling rules to your content */
-@font-face {
-  font-family: 'SONGERSemiExpanded-Bold';
-  src:url('SONGERSemiExpanded-Bold.ttf.woff') format('woff'),
-      url('SONGERSemiExpanded-Bold.ttf.svg#SONGERSemiExpanded-Bold') format('svg'),
-      url('SONGERSemiExpanded-Bold.ttf.eot'),
-      url('SONGERSemiExpanded-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
@@ -18,59 +8,76 @@ body {
   margin: 0;
 }
 
+b {
+  font-weight: bold;
+}
+
+heading-large {
+  color: white;
+  font-size: 125px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+heading-small {
+  color: white;
+  font-size: 30px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 h1 {
   text-align: center;
   color: white;
-  font-size: 75px;
-  font-family: 'SONGERSemiExpanded-Bold';
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-h2 {
-  position: absolute;
-	color: white;
-	font-size: 50px;
-	font-family: 'SONGERSemiExpanded-Bold';
-	padding-left: 200px;
-  padding-top: 25px;
+sub-h1 {
+  color: white;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-h3 {
-  padding-left: 700px;
-  padding-right: 200px;
-	color: white;
-	font-size: 20px;
-	font-family: 'SONGERSemiExpanded-Bold';
+body {
+  color: white;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+  font-style: normal;
 }
 
-f1 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 30px;
-	color: white;
-	padding-top: 20px;
-	text-align: centre;
+h2{ /*Header in the scroll slider*/
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding-top: 20px;
 }
 
-f2 {
-	font-family: 'SONGERSemiExpanded-Bold';
-	font-size: 20px;
-	color: white;
-}
-
-a {
-  font-family: 'SONGERSemiExpanded-Bold';
+slider-main {
+  color: white;
+  font-size: 20px;
 }
 
 .grid-container { /*Creates grid for my website*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100vh 60vh 40vh 10vh 20vh;
+  grid-template-rows: 100vh 90vh 30vh 20vh;
   height: 100vh;
 }
 
 .nav {
   box-sizing: border-box;
   text-align: right;
-  background-color: blue;
+  background-color: rgba(0,0,0,.5);
   position: fixed;
   z-index: 99;
   width:100%;
@@ -78,17 +85,14 @@ a {
   animation-duration: 3s;
   animation-timing-function: ease-out;
 }
-
 .nav-logo {
   text-align: right;
-  width: auto;
-  height: 45px;
   position: absolute;
-  padding-top: 5px;
-  padding-left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.nav-logo img {width:100%; height:100%;}
+.nav-logo img {width:75%; height:auto;}
 
 /* CSS for block menu starts here */
 ul {
@@ -97,9 +101,10 @@ ul {
   list-style: none;
 }
 ul li {
-  font-family: 'SONGERSemiExpanded-Bold';
+  font-family: "Ledger", serif;
+  font-weight: 550;
+  font-style: normal;
   font-size: 20px;
-  font-weight: bold;
   display: inline-block;
   position: relative;
   padding: 13px 30px 17px; /*padding for main block menu buttons */
@@ -151,7 +156,8 @@ ul li:hover ul {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background-color: green;
+  background-color: rgba(36, 51, 103, 0.65);
+  background-image: url("../images/page3_background.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -161,62 +167,197 @@ ul li:hover ul {
   overflow: hidden;
   text-align: center;
   margin-top: 25vh;
-  animation-name: fadein;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  background-color: none;
   color: white;
 }
 
-@keyframes fadein {
-	
-0% {
-    opacity: 0;
-    transform: translateY(80%);
-  }
-  20% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+.header-line { /* Text in the header*/
+  background-color: white;
+  width: 50%;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 
 .content { /* Main text goes here */
-  box-sizing: border-box;
-  background-color: white;
+  position: relative;
+  background-color: #3750A5;
 }
 
-.text-container {
-  overflow: hidden;
-  background-color: white;
-  scroll-snap-align: start;
-}
-
-.scroll-slider {
-  background-color: orange;
+.text-container { /*Holds text on the page*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inline-image-right { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
 	margin-left: auto; 
-	margin-right: 100px;
+	margin-right: 10%;
+	right: 0;
 	width: 500px;
-	height: 400px;
-	background-color: brown;
-	margin-top: 100px;
+	height: 500px;
+	background-color: #243367;
 	overflow: hidden;
 	color: white;
+	position: absolute;
 	
 }
 
-.inline-image { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
-	margin-top: 100px;
+.inline-image-left { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
+	margin-left: 10%; 
+	width: 500px;
+	height: 500px;
+	background-color: #243367;
 	overflow: hidden;
-	height: 600px;
+	color: white;
+	position: absolute;
+}
+
+.body-left {
+  position: absolute;
+  background-color: none;
+  width: 50%;
+}
+
+.body-right {
+  position: absolute;
+  background-color: none;
+  width: 50%;
+  right: 0;
+  margin-right: 10%;
+}
+
+.carousel-container-right {
+  background-color: #243367;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto; 
+  margin-right: 10%;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  color: white;
+  position: absolute;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+.carousel {
+  position: absolute;
+}
+
+.carousel-inner {  /* Image size should be set to 500 by 500 (72 PPI) in ps */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #428bca;
+}
+
+.line { /*Line in body text*/
+  background-color: white;
+  height: 1px;
+  width: 90%;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 15px;
 }
 
 #myBtn { /* Back to top buttons, sends user to top of page */
@@ -259,7 +400,28 @@ transform: scale(1.1);
 }
 
 .footer { /* sits at the bottom of the page, contains name and copyright statement */
+  position: relative;
   padding-top: 25px;
-  background-color: yellow;
+  background-color: #243367;
   text-align: center;
+}
+
+.footer-button {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer-copyright { /* sits at the bottom of the page, contains name and copyright statement */
+  position: absolute;
+  color: #3F56A8;
+  left: 0;
+  right: 0;
+  bottom: 5px;
 }
