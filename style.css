@@ -1,76 +1,446 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Kiwi Conservation Club</title>
-		<meta charset="utf-8">
-		<meta name="keywords" content="Kiwi, Forest, Liam Skipworth"/>
-		<meta name="Author" content="Liam Skipworth"/>
-		<meta name="Description" content="A KCC website page"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!-- import the webpage's stylesheet goes here -->
-		<link rel="stylesheet" href="css/style4_V3.css">
-		
-		<link rel="icon" href="images/Page_Icon.png">
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ledger&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-	</head>
+/* CSS files add styling rules to your content */
+.center {
+  text-align: center;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+b {
+  font-weight: bold;
+}
+
+u {
+  text-decoration: underline;
+}
+
+/*Styling for all text in the header*/
+heading-large {
+  color: white;
+  font-size: 175px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+heading-small {
+  color: white;
+  font-size: 30px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+heading-under { 
+  text-align: center;
+  color: white;
+  font-size: 21px;
+  padding-left: 0px;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h1 { /*Styling for the headers*/
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;;
+}
+
+sub-h1 { /*Styling for the sub-heading text*/
+  color: white;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body { /*Styling for the body text*/
+  color: white;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+h2{ /*Header in the scroll slider*/
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+slider-main { /*Styling for text in the scroll slider*/
+  color: white;
+  font-size: 25px;
+}
+
+slider-learnmore { /*Styling for the learn more button in the scroll slider*/
+  font-size: 26px;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover:not(#nav) { /*All links except for the nav become underlined when hovered over*/
+  text-decoration: underline;
+}
+
+.grid-container { /*Creates grid for my website*/
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 40vh 60vh 100vh 40vh 20vh;
+  height: 100vh;
+}
+
+.nav {
+  box-sizing: border-box;
+  text-align: right;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  z-index: 99;
+  width:100%;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+
+.nav-logo { /*Styling for logo in the navigation*/
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.nav-logo img {width:75%; height:auto;}
+
+/* CSS for block menu starts here */
+ul {
+  display: inline;
+  padding: 20px 0px 0px 0px;
+  list-style: none;
+}
+ul li {
+  font-size: 20px;
+  font-family: "Ledger", serif;
+  font-weight: 550;
+  font-style: normal;
+  display: inline-block;
+  position: relative;
+  padding: 13px 30px 17px; /*padding for main block menu buttons */
+}
+ul li:hover {
+  a {color:black;} /*When box is hovered over, text color changes to white*/
+  background: white;
+  }
+  
+/* Hover Colours*/
+a:link {color: white;} /* unvisited link */
+a:visited {color:#FFFFFF;} /* visited link */
+a:hover {color:white;} /* mouse over link */
+a:active {color:#FFFFFF;}  /* selected link */
+
+a {
+text-decoration: none;
+}
+
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px; /* space between each drop-down menu list */
+  left: 0;
+  width: 175px; /* width of drop-down menu list */
+  display: none;
+  visibility: hidden; /* this hides the drop-down menu list */
+  z-index: 1; /* for overlapping divs, bringing to the front like a drop down menu */
+}
+
+ul li ul li { 
+  background: white; /* this is the drop-down menu background color */
+  display: block; 
+}
+ul li ul li:hover { background: grey;} /* this is the drop-down menu hover on blocks */
+
+ul li:hover ul {
+  display: block;
+  visibility: visible; /* this makes the drop-down menu visible*/
+}
+
+.grow { 
+transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+transform: scale(1.1); 
+}
+
+/* Style for Navigation ends here*/
+
+.header {
+  overflow: hidden;
+  background-color: #243367;
+  scroll-snap-align: start;
+}
+
+.header-background { /*Background image in the header*/
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  right: 0%;
+  top: 0%;
+  background-color: #212840;
+}
+
+.header-content { /* Text in the header*/
+  position: relative;
+  overflow: hidden;
+  background-color: none;
+  width: 50%;
+  height: 300px;
+  text-align: center;
+  margin-top: 300px;
+  color: white;
+}
+
+.header-content-header { /* Text in the header*/
+  background-color: none;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  left: 24%;
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-content-main { /* Text in the header*/
+  overflow: hidden;
+  background-color: none;
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 190px;
+  width: 100%;
+}
+
+.header-content-main-sub{ /* Text in the header*/
+  text-align: center;
+  background-color: none;
+  padding-bottom: 10px;
+}
+
+.header-line { /* Text in the header*/
+  background-color: white;
+  width: 50%;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.content { /* Main text goes here*/
+  position: relative;
+  background-color: #3750A5;
+}
+
+.text-container { /*Holds text on the page*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;;
+}
+
+.scroll-slider { 
+  background-color: #243367;
+  align-items: center;
+  display: flex;
+}
+
+.scroll-slider-left { /*Left element of the scroll slider*/
+  position: absolute;
+  background-color: rgba(231, 0, 50, 0.7);
+  width: 400px;
+  height: 400px;
+  margin-left: 250px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.scroll-slider-middle { /*Central element of the scroll slider*/
+  position: absolute;
+  background-color: rgba(234, 168, 0, 0.8);
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.scroll-slider-right { /*Right element of the scroll slider*/
+  position: absolute;
+  background-color: rgba(28, 108, 0, 1);
+  width: 400px;
+  height: 400px;
+  right: 0px;
+  margin-right: 250px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.slider-line { /* Line in the scroll slider*/
+  background-color: white;
+  width: 75%;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-body { /* Body text of the scroll slider*/
+  background-color: none;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-learn-more { /*Places the learn more text at the bottom of the element*/
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.warning { /*Warning message in body text*/
+  position: absolute;
+  background-color: #FFB700;
+  color: black;
+  width: 500px;
+  height: 300px;
+  bottom: 50px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.64);
+}
+
+.warning-container { /*Holds the text and images in the warning box*/
+   position: absolute;
+}
+
+.warning-body { /*Warning message in body text*/
+  background-color: none;
+  width: 80%;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.warning-logo { /*Icon of the electric bolt in the warning message*/
+  position: absolute; 
+  background-color: none;
+  width: 12%;
+  text-align: center;
+    margin-top: 25px;
+}
+
+.warning-logo img {width:60%; height:auto;}
+
+.line { /*Line in body text*/
+  background-color: white;
+  height: 1px;
+  width: 90%;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+#myBtn { /* Back to top buttons, sends user to top of page */
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; /* Brings element to the front */
+  font-size: 18px;
+  border: none;
+  background-color: white;
+  color: Black;
+  cursor: pointer;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+#myBtn.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#myBtn:hover {
+	background-color: grey; /* Changes the color of the button when hovered */
+	transition-duration: 0.4s;
+}
+
+.footer { /* sits at the bottom of the page, contains name and copyright statement */
+  position: relative;
+  padding-top: 25px;
+  background-color: #243367;
+  text-align: center;
+}
+
+.footer-button {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer-button:hover {
+  background-color: grey;
+  transition-duration: 0.2s;
 	
-	
-	<body>
-		
-		<div class="grid-container">
-			<div class="nav">
-				<div class="nav-logo" class="grow"><a href="index.html">Logo</a></div>
-					<ul>
-						<li><a href="index_V2.html">Page 1</a></li>
-						<li><a href="page2_V2.html">Page 2</a></li>
-						<li><a href="page3_V2.html">Page 3</a></li>
-						<li><a href="page4_V2.html">Page 4</a></li>	
-					</ul>
-			</div>
-			
-			<div class="header">
-				<div class="header-background">
-					<div class="header-content">
-						<heading-large>CONTACT</heading-large><br>
-						<heading-small>whakapā mai</heading-small>
-					</div>
-				</div>
-			</div>
-			
-			<div class="content"> <!-- This contains the text -->
-				<button onclick="topFunction()" id="myBtn" title="Go to Top"><img src="images/back-to-top.png" alt="" width="30px"> </button>
-				<div class="text-container">
-					<h1>Call Us</h1>
-					<body><b>School Office</b></body><br>
-					<body>232 8184</body>
-				</div>
-				<div class="line"></div>
-			</div>
-			
-			<div class="content">
-				<div class="text-container">
-					<h1>Email Us</h1>
-					<body><b>EOTC Coordinator</b></body><br>
-					<body>redmonds@tawacollege.school.nz</body>
-					<br><br>
-					<body><b>School</b></body><br>
-					<body>secretary@tawacollege.school.nz</body>
-				</div>
-			</div>
-			
-			<div class="footer">Footer</div>
-		</div>
-		
-		<script type="text/javascript" src="js/fadeout.js"></script>
-		<script type="text/javascript" src="js/backtotop.js"></script>
-		
-	</body>
-</html>
+}
+
+.footer-copyright { /* sits at the bottom of the page, contains name and copyright statement */
+  position: absolute;
+  color: #3F56A8;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+}
