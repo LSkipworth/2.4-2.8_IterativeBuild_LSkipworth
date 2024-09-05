@@ -32,7 +32,7 @@ heading-small {
 
 h1 {
   text-align: center;
-  color: black;
+  color: white;
   font-size: 50px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -40,7 +40,7 @@ h1 {
 }
 
 sub-h1 {
-  color: black;
+  color: white;
   font-size: 25px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -48,7 +48,7 @@ sub-h1 {
 }
 
 body {
-  color: black;
+  color: white;
   font-size: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 350;
@@ -77,22 +77,23 @@ slider-main {
 .nav {
   box-sizing: border-box;
   text-align: right;
-  background-color: blue;
+  background-color: rgba(0,0,0,.5);
   position: fixed;
   z-index: 99;
   width:100%;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
 }
 
 .nav-logo {
   text-align: right;
-  width: auto;
-  height: 45px;
   position: absolute;
-  padding-top: 5px;
-  padding-left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.nav-logo img {width:100%; height:100%;}
+.nav-logo img {width:75%; height:auto;}
 
 /* CSS for block menu starts here */
 ul {
@@ -156,7 +157,7 @@ ul li:hover ul {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background-color: green;
+  background-color: #243367;
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -166,13 +167,23 @@ ul li:hover ul {
   overflow: hidden;
   text-align: center;
   margin-top: 25vh;
-  background-color: grey;
+  background-color: none;
   color: white;
+}
+
+.header-line { /* Text in the header*/
+  background-color: white;
+  width: 50%;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 
 .content { /* Main text goes here */
   position: relative;
-  background-color: white;
+  background-color: #3750A5;
 }
 
 .text-container { /*Holds text on the page*/
@@ -219,7 +230,7 @@ ul li:hover ul {
 }
 
 .line { /*Line in body text*/
-  background-color: black;
+  background-color: white;
   height: 1px;
   width: 90%;
   display: block;
@@ -330,7 +341,28 @@ transform: scale(1.1);
 }
 
 .footer { /* sits at the bottom of the page, contains name and copyright statement */
+  position: relative;
   padding-top: 25px;
-  background-color: yellow;
+  background-color: #243367;
   text-align: center;
+}
+
+.footer-button {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer-copyright { /* sits at the bottom of the page, contains name and copyright statement */
+  position: absolute;
+  color: #3F56A8;
+  left: 0;
+  right: 0;
+  bottom: 5px;
 }
