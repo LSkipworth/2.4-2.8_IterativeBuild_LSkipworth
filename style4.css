@@ -1,6 +1,5 @@
 /* CSS files add styling rules to your content */
 html {
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
@@ -37,6 +36,7 @@ h1 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin-bottom: 10px;
 }
 
 sub-h1 {
@@ -70,7 +70,7 @@ slider-main {
 .grid-container { /*Creates grid for my website*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100vh 50vh 50vh 20vh;
+  grid-template-rows: 100vh 30vh 40vh 20vh;
   height: 100vh;
 }
 
@@ -150,14 +150,13 @@ ul li:hover ul {
 
 .header {
   background-color: black;
-  scroll-snap-align: start;
 }
 
 .header-background { /*Background image in the header*/
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background-color: rgba(36, 51, 103, 0.7);
+  background-color: rgba(36, 51, 103, 0.5);
   background-image: url("../images/page4_background.jpg");
   background-size: cover;
   background-position: center;
@@ -191,6 +190,14 @@ ul li:hover ul {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.text-swish { /*Styling for text swish*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-bottom: 30px;
 }
 
 .inline-image-right { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
@@ -306,17 +313,15 @@ ul li:hover ul {
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
   z-index: 99; /* Brings element to the front */
   font-size: 18px;
-  border: none;
-  background-color: orange;
+  border: black 2px solid;
+  background-color: #DCDCDC;
   color: Black;
   cursor: pointer;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   font-size: 50px;
   opacity: 0;
   transition: all 0.4s;
@@ -329,8 +334,16 @@ ul li:hover ul {
 }
 
 #myBtn:hover {
-	background-color: red; /* Changes the color of the button when hovered */
+	background-color: Grey; /* Changes the color of the button when hovered */
 	transition-duration: 0.4s;
+}
+
+.style-backtotop { /*Styles the icon in the back to top button*/
+margin-top: 5px;
+width: 30px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grow { 

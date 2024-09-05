@@ -11,6 +11,7 @@ b {
   font-weight: bold;
 }
 
+/*Styling for all text in the header*/
 heading-large {
   color: white;
   font-size: 125px;
@@ -29,13 +30,14 @@ heading-small {
   text-shadow: 2px 2px 4px #000000;
 }
 
-h1 {
+h1 { /*Styling for the text headers*/
   text-align: center;
   color: white;
   font-size: 50px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
+  margin-bottom: 10px;
 }
 
 sub-h1 {
@@ -69,7 +71,7 @@ slider-main {
 .grid-container { /*Creates grid for my website*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100vh 90vh 90vh 90vh 60vh 50vh 20vh;
+  grid-template-rows: 100vh 95vh 90vh 95vh 60vh 60vh 20vh;
   height: 100vh;
 }
 
@@ -149,7 +151,6 @@ ul li:hover ul {
 
 .header {
   background-color: black;
-  scroll-snap-align: start;
 }
 
 .header-background { /*Background image in the header*/
@@ -190,6 +191,14 @@ ul li:hover ul {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.text-swish { /*Styling for text swish*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  margin-bottom: 30px;
 }
 
 .inline-image-right { /* Image size should be set to 1024 by 768 (72 PPI) in ps */
@@ -243,7 +252,7 @@ ul li:hover ul {
   border-radius: 15px;
 }
 
-.carousel-container-right {
+.carousel-container-right { /*Carousel container aligned to the right of the page*/
   background-color: #243367;
   display: flex;
   justify-content: center;
@@ -257,9 +266,10 @@ ul li:hover ul {
   color: white;
   position: absolute;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  border-radius: 20px;
 }
 
-.carousel-container-left {
+.carousel-container-left { /*Carousel container aligned to the left of the page*/
   background-color: #243367;
   display: flex;
   justify-content: center;
@@ -272,6 +282,7 @@ ul li:hover ul {
   color: white;
   position: absolute;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  border-radius: 20px;
 }
 
 .carousel {
@@ -282,6 +293,7 @@ ul li:hover ul {
   position: relative;
   overflow: hidden;
   width: 100%;
+
 }
 
 .carousel-open:checked + .carousel-item {
@@ -303,7 +315,7 @@ ul li:hover ul {
 }
 
 .carousel-control {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
@@ -447,6 +459,7 @@ ul li:hover ul {
 }
 
 .slider-body { /* Text in the header*/
+  margin-top: 5px;
   background-color: none;
   width: 90%;
   text-align: center;
@@ -458,17 +471,15 @@ ul li:hover ul {
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 20px;
+  bottom: 30px;
   right: 30px;
   z-index: 99; /* Brings element to the front */
   font-size: 18px;
-  border: none;
-  background-color: white;
+  border: black 2px solid;
+  background-color: #DCDCDC;
   color: Black;
   cursor: pointer;
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
   font-size: 50px;
   opacity: 0;
   transition: all 0.4s;
@@ -481,8 +492,16 @@ ul li:hover ul {
 }
 
 #myBtn:hover {
-	background-color: grey; /* Changes the color of the button when hovered */
+	background-color: Grey; /* Changes the color of the button when hovered */
 	transition-duration: 0.4s;
+}
+
+.style-backtotop { /*Styles the icon in the back to top button*/
+margin-top: 5px;
+width: 30px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grow { 
@@ -518,4 +537,19 @@ transform: scale(1.1);
   left: 0;
   right: 0;
   bottom: 5px;
+}
+
+.footer-attribution { /* styles image attribution for website */
+  position: absolute;
+  color: #3F56A8;
+  left: 5px;
+  bottom: 5px;
+}
+
+.footer-attribution:link {
+  color: #3F56A8;
+}
+
+darken {
+  color: #3F56A8;
 }
