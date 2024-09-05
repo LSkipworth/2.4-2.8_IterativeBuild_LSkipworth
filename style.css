@@ -20,6 +20,7 @@ u {
   text-decoration: underline;
 }
 
+/*Styling for all text in the header*/
 heading-large {
   color: white;
   font-size: 175px;
@@ -38,7 +39,7 @@ heading-small {
   text-shadow: 2px 2px 4px #000000;
 }
 
-heading-under {
+heading-under { 
   text-align: center;
   color: white;
   font-size: 21px;
@@ -49,25 +50,25 @@ heading-under {
   text-shadow: 2px 2px 4px #000000;
 }
 
-h1 {
+h1 { /*Styling for the headers*/
   text-align: center;
-  color: black;
+  color: white;
   font-size: 50px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-style: normal;
+  font-style: normal;;
 }
 
-sub-h1 {
-  color: black;
+sub-h1 { /*Styling for the sub-heading text*/
+  color: white;
   font-size: 25px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-body {
-  color: black;
+body { /*Styling for the body text*/
+  color: white;
   font-size: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 350;
@@ -81,16 +82,22 @@ h2{ /*Header in the scroll slider*/
   padding-top: 20px;
 }
 
-slider-main {
+slider-main { /*Styling for text in the scroll slider*/
   color: white;
   font-size: 25px;
 }
 
-slider-learnmore {
-  color: white;
+slider-learnmore { /*Styling for the learn more button in the scroll slider*/
   font-size: 26px;
-  text-decoration: underline;
   font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover:not(#nav) { /*All links except for the nav become underlined when hovered over*/
+  text-decoration: underline;
 }
 
 .grid-container { /*Creates grid for my website*/
@@ -103,7 +110,7 @@ slider-learnmore {
 .nav {
   box-sizing: border-box;
   text-align: right;
-  background-color: blue;
+  background-color: rgba(0,0,0,.5);
   position: fixed;
   z-index: 99;
   width:100%;
@@ -112,16 +119,14 @@ slider-learnmore {
   animation-timing-function: ease-out;
 }
 
-.nav-logo {
+.nav-logo { /*Styling for logo in the navigation*/
   text-align: right;
-  width: auto;
-  height: 45px;
   position: absolute;
-  padding-top: 5px;
-  padding-left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
-.nav-logo img {width:100%; height:100%;}
+.nav-logo img {width:75%; height:auto;}
 
 /* CSS for block menu starts here */
 ul {
@@ -174,11 +179,20 @@ ul li:hover ul {
   display: block;
   visibility: visible; /* this makes the drop-down menu visible*/
 }
+
+.grow { 
+transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+transform: scale(1.1); 
+}
+
 /* Style for Navigation ends here*/
 
 .header {
   overflow: hidden;
-  background-color: orange;
+  background-color: #243367;
   scroll-snap-align: start;
 }
 
@@ -189,13 +203,13 @@ ul li:hover ul {
   width: 50%;
   right: 0%;
   top: 0%;
-  background-color: green;
+  background-color: #212840;
 }
 
 .header-content { /* Text in the header*/
   position: relative;
   overflow: hidden;
-  background-color: grey;
+  background-color: none;
   width: 50%;
   height: 300px;
   text-align: center;
@@ -242,26 +256,26 @@ ul li:hover ul {
   margin-bottom: 10px;
 }
 
-.content { /* Main text goes here */
+.content { /* Main text goes here*/
   position: relative;
-  background-color: white;
+  background-color: #3750A5;
 }
 
 .text-container { /*Holds text on the page*/
   width: 80%;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;;
 }
 
-.scroll-slider {
-  background-color: grey;
+.scroll-slider { 
+  background-color: #243367;
   align-items: center;
   display: flex;
 }
 
-.scroll-slider-left {
+.scroll-slider-left { /*Left element of the scroll slider*/
   position: absolute;
-  background-color: green;
+  background-color: rgba(231, 0, 50, 0.7);
   width: 400px;
   height: 400px;
   margin-left: 250px;
@@ -269,9 +283,9 @@ ul li:hover ul {
   border-radius: 15px;
 }
 
-.scroll-slider-middle {
+.scroll-slider-middle { /*Central element of the scroll slider*/
   position: absolute;
-  background-color: blue;
+  background-color: rgba(234, 168, 0, 0.8);
   width: 400px;
   height: 400px;
   text-align: center;
@@ -282,9 +296,9 @@ ul li:hover ul {
   right: 0;
 }
 
-.scroll-slider-right {
+.scroll-slider-right { /*Right element of the scroll slider*/
   position: absolute;
-  background-color: purple;
+  background-color: rgba(28, 108, 0, 1);
   width: 400px;
   height: 400px;
   right: 0px;
@@ -293,7 +307,7 @@ ul li:hover ul {
   border-radius: 15px;
 }
 
-.slider-line { /* Text in the header*/
+.slider-line { /* Line in the scroll slider*/
   background-color: white;
   width: 75%;
   height: 1px;
@@ -302,15 +316,15 @@ ul li:hover ul {
   margin-right: auto;
 }
 
-.slider-body { /* Text in the header*/
-  background-color: orange;
+.slider-body { /* Body text of the scroll slider*/
+  background-color: none;
   width: 90%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
-.slider-learn-more {
+.slider-learn-more { /*Places the learn more text at the bottom of the element*/
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -320,7 +334,8 @@ ul li:hover ul {
 
 .warning { /*Warning message in body text*/
   position: absolute;
-  background-color: pink;
+  background-color: #FFB700;
+  color: black;
   width: 500px;
   height: 300px;
   bottom: 50px;
@@ -329,17 +344,32 @@ ul li:hover ul {
   margin-left: auto; 
   margin-right: auto;
   border-radius: 15px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.64);
+}
+
+.warning-container { /*Holds the text and images in the warning box*/
+   position: absolute;
 }
 
 .warning-body { /*Warning message in body text*/
-  background-color: grey;
+  background-color: none;
   width: 80%;
   margin-left: 60px;
   margin-top: 30px;
 }
 
+.warning-logo { /*Icon of the electric bolt in the warning message*/
+  position: absolute; 
+  background-color: none;
+  width: 12%;
+  text-align: center;
+    margin-top: 25px;
+}
+
+.warning-logo img {width:60%; height:auto;}
+
 .line { /*Line in body text*/
-  background-color: black;
+  background-color: white;
   height: 1px;
   width: 90%;
   display: block;
@@ -361,7 +391,7 @@ ul li:hover ul {
   z-index: 99; /* Brings element to the front */
   font-size: 18px;
   border: none;
-  background-color: orange;
+  background-color: white;
   color: Black;
   cursor: pointer;
   border-radius: 50%;
@@ -379,12 +409,38 @@ ul li:hover ul {
 }
 
 #myBtn:hover {
-	background-color: red; /* Changes the color of the button when hovered */
+	background-color: grey; /* Changes the color of the button when hovered */
 	transition-duration: 0.4s;
 }
 
 .footer { /* sits at the bottom of the page, contains name and copyright statement */
+  position: relative;
   padding-top: 25px;
-  background-color: yellow;
+  background-color: #243367;
   text-align: center;
+}
+
+.footer-button {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer-button:hover {
+  background-color: grey;
+  transition-duration: 0.2s;
+	
+}
+
+.footer-copyright { /* sits at the bottom of the page, contains name and copyright statement */
+  position: absolute;
+  color: #3F56A8;
+  left: 0;
+  right: 0;
+  bottom: 5px;
 }
